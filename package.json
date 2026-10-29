@@ -1,0 +1,7 @@
+{
+  "name": "polinomios-irredutiveis",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Polinômios irredutíveis de grau 3 em Q[x], baseado em Bemm e Bemm (2021)",
+  "scripts": { "test": "node --test tests/nucleo.test.js" }
+}

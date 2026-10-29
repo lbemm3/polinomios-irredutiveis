@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polinômios irredutíveis de grau 3</title>
+  <meta name="description" content="Gere e verifique polinômios irredutíveis de grau 3 em Q[x] usando apenas os algarismos dos coeficientes. Baseado em Bemm e Bemm (2021).">
+  <link rel="stylesheet" href="estilo.css">
+  <script type="module" src="src/interface.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <main class="folha">
+    <header>
+      <h1>Polinômios irredutíveis de grau 3</h1>
+      <p class="lead">Gere e verifique polinômios irredutíveis em ℚ[x] olhando só os algarismos dos coeficientes, sem fatorar nada. Funciona com números de qualquer tamanho.</p>
+      <p class="fonte">Método do artigo <a id="link-artigo" href="https://periodicos.ifrs.edu.br/index.php/REMAT/article/view/4212" target="_blank" rel="noopener noreferrer">Classes de Polinômios Irredutíveis de graus 3 em Q[x]</a>, de Bemm e Bemm (2021).</p>
+    </header>
+
+    <p id="aviso" class="aviso" role="alert" hidden>Esta página precisa ser aberta pelo endereço publicado (https://…) ou por um servidor local. Abrir o arquivo index.html direto do computador não funciona, porque o navegador bloqueia os módulos JavaScript.</p>
+    <noscript><p class="aviso">Ative o JavaScript para usar o aplicativo.</p></noscript>
+
+    <div class="abas" role="tablist" aria-label="Seções do aplicativo">
+      <button type="button" role="tab" id="aba-gerador" aria-controls="painel-gerador" aria-selected="true">Gerador</button>
+      <button type="button" role="tab" id="aba-verificador" aria-controls="painel-verificador" aria-selected="false" tabindex="-1">Verificador</button>
+      <button type="button" role="tab" id="aba-ampliar" aria-controls="painel-ampliar" aria-selected="false" tabindex="-1">Ampliar</button>
+      <button type="button" role="tab" id="aba-conjuntos" aria-controls="painel-conjuntos" aria-selected="false" tabindex="-1">Conjuntos</button>
+    </div>
+
+    <div id="conteudo">
+      <section id="painel-gerador" role="tabpanel" aria-labelledby="aba-gerador"></section>
+      <section id="painel-verificador" role="tabpanel" aria-labelledby="aba-verificador" hidden></section>
+      <section id="painel-ampliar" role="tabpanel" aria-labelledby="aba-ampliar" hidden></section>
+      <section id="painel-conjuntos" role="tabpanel" aria-labelledby="aba-conjuntos" hidden></section>
+    </div>
+  </main>
+
+  <script>
+    if (location.protocol === 'file:') document.getElementById('aviso').hidden = false;
+  </script>
+</body>
+</html>
